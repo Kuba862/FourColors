@@ -1,0 +1,160 @@
+ * {
+    margin: 0;
+    padding: 0;
+  
+ } 
+
+ .bg {
+    background-color: grey ;
+    height: 100vh; /*nie pojawiają się paski przy kolorach*/
+}
+
+.circle {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    border: 2px solid white;
+    cursor: pointer; /*po najechaniu będzie łapka*/
+    z-index: 1;
+}
+
+div.red { /*div.red bo mamy klasę red też w p więc trzeba zprecyzować*/
+    top: 20px;
+    left: 20px;
+    background-color: rgb(204, 37, 37);
+}
+
+div.green {
+    top: 20px;
+    right: 20px;
+    background-color: rgb(28, 151, 28);
+}
+
+div.blue {
+    bottom: 20px;
+    left: 20px;
+    background-color: rgb(48, 99, 236);
+}
+
+div.orange {
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(255, 153, 0);
+}
+
+.bg p {
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 100vh; /*wyśrodkowanie*/
+    width: 100%;
+    text-align: center;
+    font-size: 50px;
+    font-family: arial;
+    opacity: 0; /*wszystkie są w środku ale mają maxymalną przeźroczystość*/
+    transition: .3s linear;
+}
+div.red:hover~div.bg { /*~ oznacza weź div, który jest
+                        młodszym bratem najechanego div.red*/
+    background-color: rgb(204, 37, 37);
+    transition: 1s linear;
+    
+}
+
+div.green:hover~div.bg {
+    background-color: rgb(28, 151, 28);
+    transition: 1s linear;
+}
+
+div.blue:hover~div.bg {
+    background-color: rgb(48, 99, 236);
+    transition: 1s linear;
+}
+
+div.orange:hover~div.bg {
+    background-color: rgb(255, 153, 0);
+    transition: 1s linear;
+}
+
+div.red:hover~div.bg p.red,
+div.green:hover~div.bg p.green,
+div.blue:hover~div.bg p.blue,
+div.orange:hover~div.bg p.orange {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+/* div.green:hover~div.bg p.green {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+div.blue:hover~div.bg p.blue {
+    opacity: 1;
+    transition: 1s linear;
+}
+
+div.orange:hover~div.bg p.orange {
+    opacity: 1;
+    transition: 1s linear;
+}
+ */
+
+
+
+
+
+/* .red {
+    position: fixed;
+    top: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: red;
+}
+.red:hover{
+    
+    background-color: green;
+    transition: 1s linear;
+    
+}
+
+.green:hover {
+    background-color: white;
+    transition: 1s linear;
+
+}
+
+.green {
+
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: green;
+}
+
+.blue {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: blue;
+}
+
+.orange {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: orange;
+} */
+
